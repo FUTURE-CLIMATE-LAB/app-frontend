@@ -1,0 +1,14 @@
+<h1>Hola {{ title }}</h1>
+<button (click) = "changeTitle()">Change</button>
+
+<!--<app-product
+  *ngFor = "let message of messages"
+  [messages] = "messages">
+</app-product>-->
+
+<ul>
+  <li *ngFor="let item of messages"> 
+    <p><b>nombre:</b> {{ item.nombre }} </p>
+    <p><b>message:</b> {{ item.body }} </p>
+  </li>
+</ul>
