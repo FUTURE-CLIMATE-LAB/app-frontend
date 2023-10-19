@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 //import { Product } from './models/product.model';
 import { Message } from './models/message.model';
 import { NgOptimizedImage } from '@angular/common';
+import { Map, tileLayer } from 'leaflet';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,16 @@ import { NgOptimizedImage } from '@angular/common';
 })
 export class AppComponent {
   title = 'app-frontend';
+  
+  ngAfterViewInit(): void{
+     const map = new Map('map').setView([-17.408, -66.204], 13);
+     
+     tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+  }
+
   http = inject(HttpClient);
   //products: Product[] = [];
   messages: Message[] = [];
