@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 //import { Product } from './models/product.model';
 import { Message } from './models/message.model';
 import { NgOptimizedImage } from '@angular/common';
-import { Map, tileLayer } from 'leaflet';
+import { Map, marker, tileLayer } from 'leaflet';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +20,12 @@ export class AppComponent {
       maxZoom: 19,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
+
+    const markerItem = marker([-17.44326, -66.11255]).addTo(map).bindPopup("Mi casa");
+    map.fitBounds([
+      [markerItem.getLatLng().lat, markerItem.getLatLng().lng]
+    ]);
+
   }
 
   http = inject(HttpClient);
