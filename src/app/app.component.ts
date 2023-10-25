@@ -11,10 +11,9 @@ import { Map, marker, tileLayer } from 'leaflet';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app-frontend';
-  
+  title = 'Practica con Mock Server';
   ngAfterViewInit(): void{
-     const map = new Map('map').setView([-17.408, -66.204], 13);
+     const map = new Map('map').setView([0, 0], 13);
      
      tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
