@@ -1,6 +1,14 @@
-# Leaflet
+# AngularMap
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
+OpenLayers es una biblioteca repleta de funciones y de alto rendimiento destinado para aplicaciones basadas en entornos GIS. OpenLayers es un código abierto que utiliza datos de OpenStreetMap. 
+
+El objetivo de este proyecto es mostrar las funcionalidades multicapa y de geolocalización que podéis consultar en la web https://1938.com.es/ejemplo-maps-angular.
+
+En otro sentido en la web https://1938.com.es/ejemplo-maps-angular encontraréis un ejemplo en ejecución y la cómo instalar este plugin en vuestro proyecto Angular 13 
+
+
+## Información sobre Anagular
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
 
 ## Development server
 
@@ -12,7 +20,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Running unit tests
 
@@ -20,7 +28,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## Further help
 
