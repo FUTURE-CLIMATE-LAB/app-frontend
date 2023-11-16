@@ -3,18 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MapComponent } from './components/map/map.component';
+import { DiferentesMapasComponent } from './componet/diferentes-mapas/diferentes-mapas.component';
+import { MapaBaseComponent } from './componet/mapa-base/mapa-base.component';
+import { MenuComponent } from './componet/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MapComponent
+    DiferentesMapasComponent,
+    MapaBaseComponent,
+    MenuComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
